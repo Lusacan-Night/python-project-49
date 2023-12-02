@@ -3,4 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/99db5be5d5f9f3d65066/maintainability)](https://codeclimate.com/github/Lusacan-Night/python-project-49/maintainability)
 
 - brain-even demo https://asciinema.org/a/MdxtmbtlnZ6NQ8Ak8S1umTuWY
-- brain-calc demo https://asciinema.org/a/7mth6HKzIyXlSxCyNp2jr1gc5
+- brain-calc demo https://asciinema.org/a/rKVYy5BtXFVEBxtirRVaVOBN5
