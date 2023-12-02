@@ -1,6 +1,7 @@
 import operator
 import prompt
 
+from math import gcd
 from random import randint, choice
 
 
@@ -8,19 +9,15 @@ def gen_random_number(begin, end):
     return randint(begin, end)
 
 
-def even_game():
-    question_number = gen_random_number(0, 100)
+def even_game(question_number):
     print(f'Question: {question_number}')
     return is_even(question_number)
 
 
-def calculate():
-    first_num = gen_random_number(0, 100)
-    second_num = gen_random_number(0, 100)
-    op = pick_random_operator()
-    print(f'{first_num} {op} {second_num}')
+def calculate_game(first_num, second_num, random_operator):
+    print(f'Question: {first_num} {random_operator} {second_num}')
 
-    match op:
+    match random_operator:
         case '*':
             return str(operator.mul(first_num, second_num))
         case '+':
@@ -29,13 +26,25 @@ def calculate():
             return str(operator.sub(first_num, second_num))
 
 
+def gcd_game(first_num, second_num):
+    print(f'Question: {first_num} {second_num}')
+    return str(gcd(first_num, second_num))
+
+
 def game_loop(name, game):
     for i in range(0, 3):
-        if game == 'even':
-            correct_answer = even_game()
-
-        if game == 'calc':
-            correct_answer = calculate()
+        match game:
+            case 'even':
+                correct_answer = even_game(gen_random_number(0, 100))
+            case 'calc':
+                first = gen_random_number(0, 100)
+                second = gen_random_number(0, 100)
+                op = pick_random_operator()
+                correct_answer = calculate_game(first, second, op)
+            case 'gcd':
+                first = gen_random_number(0, 100)
+                second = gen_random_number(0, 100)
+                correct_answer = gcd_game(first, second)
 
         answer = prompt.string('Your answer: ')
 
