@@ -5,3 +5,4 @@
 - brain-even demo https://asciinema.org/a/MdxtmbtlnZ6NQ8Ak8S1umTuWY
 - brain-calc demo https://asciinema.org/a/rKVYy5BtXFVEBxtirRVaVOBN5
 - brain-gcd demo https://asciinema.org/a/adAvE2DUpfTKeJHiMWpMSTaur
+- brain-progression https://asciinema.org/a/cI4MBROZbWRblvcZs3yBTRn44
