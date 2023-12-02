@@ -2,5 +2,5 @@
 [![Actions Status](https://github.com/Lusacan-Night/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Lusacan-Night/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/99db5be5d5f9f3d65066/maintainability)](https://codeclimate.com/github/Lusacan-Night/python-project-49/maintainability)
 
-brain-even demo https://asciinema.org/a/MdxtmbtlnZ6NQ8Ak8S1umTuWY
-brain-calc demo https://asciinema.org/a/JDoP6Oq7hd1Ad841av5Kh5ZRF
+- brain-even demo https://asciinema.org/a/MdxtmbtlnZ6NQ8Ak8S1umTuWY
+- brain-calc demo https://asciinema.org/a/JDoP6Oq7hd1Ad841av5Kh5ZRF
