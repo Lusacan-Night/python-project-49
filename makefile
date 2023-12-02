@@ -7,6 +7,9 @@ brain-games:
 brain-even:
 	poetry run brain-even
 
+brain-calc:
+	poetry run brain-calc
+
 build:
 	poetry build
 
@@ -20,4 +23,4 @@ lint:
 	poetry run flake8 brain_games
 
 install-local:
-	pipx install dist/*.whl --force
+	pipx install . --force
