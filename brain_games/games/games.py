@@ -42,6 +42,7 @@ def progression():
     print(f'Question: {" ".join(sequence)}')
     return random_num
 
+
 def game_loop(name, game):
     for i in range(0, 3):
         match game:
