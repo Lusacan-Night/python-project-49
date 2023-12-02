@@ -31,6 +31,17 @@ def gcd_game(first_num, second_num):
     return str(gcd(first_num, second_num))
 
 
+def progression():
+    start = gen_random_number(1, 5)
+    end = gen_random_number(25, 50)
+    step = start
+    sequence = [str(x) for x in range(start, end, step)]
+    random_num = choice(sequence)
+    index_position = sequence.index(random_num)
+    sequence[index_position] = '..'
+    print(f'Question: {" ".join(sequence)}')
+    return random_num
+
 def game_loop(name, game):
     for i in range(0, 3):
         match game:
@@ -45,6 +56,8 @@ def game_loop(name, game):
                 first = gen_random_number(0, 100)
                 second = gen_random_number(0, 100)
                 correct_answer = gcd_game(first, second)
+            case 'progression':
+                correct_answer = progression()
 
         answer = prompt.string('Your answer: ')
 
