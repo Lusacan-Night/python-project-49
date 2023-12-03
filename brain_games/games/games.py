@@ -13,26 +13,32 @@ def question(question):
     return print(f'Question: {question}')
 
 
-def even_game(question_number):
+def even_game():
+    question_number = gen_random_number(0, 100)
     question(question_number)
     return is_even(question_number)
 
 
-def calculate_game(first_num, second_num, random_operator):
-    print(f'Question: {first_num} {random_operator} {second_num}')
+def calculate_game():
+    first = gen_random_number(0, 100)
+    second = gen_random_number(0, 100)
+    op = pick_random_operator()
+    print(f'Question: {first} {op} {second}')
 
-    match random_operator:
+    match op:
         case '*':
-            return str(operator.mul(first_num, second_num))
+            return str(operator.mul(first, second))
         case '+':
-            return str(operator.add(first_num, second_num))
+            return str(operator.add(first, second))
         case '-':
-            return str(operator.sub(first_num, second_num))
+            return str(operator.sub(first, second))
 
 
-def gcd_game(first_num, second_num):
-    print(f'Question: {first_num} {second_num}')
-    return str(gcd(first_num, second_num))
+def gcd_game():
+    first = gen_random_number(0, 100)
+    second = gen_random_number(0, 100)
+    print(f'Question: {first} {second}')
+    return str(gcd(first, second))
 
 
 def progression_game():
@@ -60,16 +66,11 @@ def game_loop(name, game):
     for i in range(0, 3):
         match game:
             case 'even':
-                correct_answer = even_game(gen_random_number(0, 100))
+                correct_answer = even_game()
             case 'calc':
-                first = gen_random_number(0, 100)
-                second = gen_random_number(0, 100)
-                op = pick_random_operator()
-                correct_answer = calculate_game(first, second, op)
+                correct_answer = calculate_game()
             case 'gcd':
-                first = gen_random_number(0, 100)
-                second = gen_random_number(0, 100)
-                correct_answer = gcd_game(first, second)
+                correct_answer = gcd_game()
             case 'progression':
                 correct_answer = progression_game()
             case 'prime':
