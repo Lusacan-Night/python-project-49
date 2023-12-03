@@ -6,8 +6,8 @@ from math import gcd
 from random import randint, choice
 
 
-def gen_random_number(begin, end):
-    return randint(begin, end)
+def gen_random_number(start, end):
+    return randint(start, end)
 
 
 def is_even(number):
@@ -24,15 +24,19 @@ def question(question):
 
 def even_game():
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    question_number = gen_random_number(1, 100)
+    start = 1
+    end = 100
+    question_number = gen_random_number(start, end)
     question(question_number)
     return is_even(question_number)
 
 
 def calculate_game():
     print('What is the result of the expression?')
-    first = gen_random_number(0, 100)
-    second = gen_random_number(0, 100)
+    start = 0
+    end = 100
+    first = gen_random_number(start, end)
+    second = gen_random_number(start, end)
     op = pick_random_operator()
     print(f'Question: {first} {op} {second}')
 
@@ -47,8 +51,10 @@ def calculate_game():
 
 def gcd_game():
     print('Find the greatest common divisor of given numbers.')
-    first = gen_random_number(0, 100)
-    second = gen_random_number(0, 100)
+    start = 0
+    end = 100
+    first = gen_random_number(start, end)
+    second = gen_random_number(start, end)
     print(f'Question: {first} {second}')
     return str(gcd(first, second))
 
@@ -70,10 +76,13 @@ def progression_game():
 
 def prime_game():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    random_num = gen_random_number(1, 200)
+    start = 1
+    end = 200
+    step = -1
+    random_num = gen_random_number(start, end)
     print(f'Question: {random_num}')
 
-    for i in range(random_num - 1, 1, -1):
+    for i in range(random_num - 1, 1, step):
         if random_num % i == 0:
             return 'no'
     return 'yes'
@@ -85,7 +94,8 @@ def wrong_answer(correct, answer):
 
 def game_loop(game):
     name = welcome_user()
-    for i in range(0, 3):
+    tries_count = 3
+    for i in range(tries_count):
         match game:
             case 'even':
                 correct_answer = even_game()
