@@ -8,13 +8,12 @@ def pick_random_operator():
 
 
 def calculate_game():
-    print('What is the result of the expression?')
     start = 0
     end = 100
     first = get_random_number(start, end)
     second = get_random_number(start, end)
     op = pick_random_operator()
-    print(f'Question: {first} {op} {second}')
+    question(first, op, second)
 
     match op:
         case '*':

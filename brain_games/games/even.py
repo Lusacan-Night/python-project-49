@@ -6,9 +6,8 @@ def is_even(number):
 
 
 def even_game():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     start = 1
     end = 100
-    question_number = get_random_number(start, end)
-    question(question_number)
-    return is_even(question_number)
+    random_number = get_random_number(start, end)
+    question(random_number)
+    return is_even(random_number)
