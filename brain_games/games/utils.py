@@ -6,7 +6,7 @@ def get_random_number(start, end):
 
 
 def question(*args):
-    return print('Question: ', *args)
+    return print('Question:', *args)
 
 
 def wrong_answer(correct, answer):
