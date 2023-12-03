@@ -73,7 +73,7 @@ def prime_game():
     random_num = gen_random_number(1, 200)
     print(f'Question: {random_num}')
 
-    for i in range(random_num - 1, 2, -1):
+    for i in range(random_num - 1, 1, -1):
         if random_num % i == 0:
             return 'no'
     return 'yes'
