@@ -1,11 +1,15 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Sultan <lusacan.night@gmail.com>"]
+description = "Brain games is a collection of 5 math mini-games, where you need to correctly answer on 3 questions"
+authors = ["Sultan Muslimov <lusacan.night@gmail.com>"]
 readme = "README.md"
+repository = https://github.com/Lusacan-Night/python-project-49
 packages = [
   { include = "brain_games" },
+]
+classifiers = [
+  "Topic: Games"
 ]
 
 [tool.poetry.scripts]
