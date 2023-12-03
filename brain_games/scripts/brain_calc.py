@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 
-from .cli import welcome_user
 from brain_games.games.games import game_loop
 
 
 def main():
-    name = welcome_user()
-    print('What is the result of the expression?')
-    game_loop(name, 'calc')
+    game_loop('calc')
 
 
 if __name__ == '__main__':
