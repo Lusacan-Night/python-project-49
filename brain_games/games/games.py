@@ -9,8 +9,12 @@ def gen_random_number(begin, end):
     return randint(begin, end)
 
 
+def question(question):
+    return print(f'Question: {question}')
+
+
 def even_game(question_number):
-    print(f'Question: {question_number}')
+    question(question_number)
     return is_even(question_number)
 
 
@@ -31,16 +35,25 @@ def gcd_game(first_num, second_num):
     return str(gcd(first_num, second_num))
 
 
-def progression():
+def progression_game():
     start = gen_random_number(1, 5)
     end = gen_random_number(25, 50)
-    step = start
+    step = gen_random_number(1, 5)
     sequence = [str(x) for x in range(start, end, step)]
     random_num = choice(sequence)
     index_position = sequence.index(random_num)
     sequence[index_position] = '..'
     print(f'Question: {" ".join(sequence)}')
     return random_num
+
+
+def prime_game():
+    random_num = gen_random_number(1, 200)
+    print(f'Question: {random_num}')
+    for i in range(random_num - 1, 2, -1):
+        if random_num % i == 0:
+            return 'no'
+    return 'yes'
 
 
 def game_loop(name, game):
@@ -58,7 +71,9 @@ def game_loop(name, game):
                 second = gen_random_number(0, 100)
                 correct_answer = gcd_game(first, second)
             case 'progression':
-                correct_answer = progression()
+                correct_answer = progression_game()
+            case 'prime':
+                correct_answer = prime_game()
 
         answer = prompt.string('Your answer: ')
 
