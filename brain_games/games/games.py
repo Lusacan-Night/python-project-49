@@ -10,8 +10,8 @@ from .prime import prime_game
 from .progression import progression_game
 
 
-def print_description(game):
-    game_description = {
+def games_description(game):
+    description = {
         'gcd':
             'Find the greatest common divisor of given numbers.',
         'even':
@@ -23,7 +23,7 @@ def print_description(game):
         'progression':
             'What number is missing in the progression?'
     }
-    return print(game_description.get(game))
+    return description.get(game)
 
 
 def match_game(game):
@@ -43,7 +43,7 @@ def match_game(game):
 def game_loop(game):
     name = welcome_user()
     TRIES_COUNT = 3
-    print_description(game)
+    print(games_description(game))
     for i in range(TRIES_COUNT):
         correct_answer = match_game(game)
         answer = prompt.string('Your answer: ')
