@@ -8,8 +8,7 @@ def pick_random_operator():
 
 
 def calculate_game():
-    start = 0
-    end = 100
+    start, end = 0, 100
     first = get_random_number(start, end)
     second = get_random_number(start, end)
     op = pick_random_operator()
