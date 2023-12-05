@@ -32,4 +32,4 @@ lint:
 	poetry run flake8 brain_games
 
 pipx-install:
-	pipx install . --force
+	pipx install .
