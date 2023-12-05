@@ -6,7 +6,7 @@ Brain games
 
 Brain games is a collection of 5 math mini-games, where you need to correctly answer on 3 questions.
 ### How to install
-    Prerequisites:
+    Required packages:
         make: ^4.4.1
         python: ^3.11
         prompt = ^0.4.1
