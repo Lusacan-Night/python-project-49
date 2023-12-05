@@ -85,6 +85,7 @@ def game_loop(game):
     TRIES_COUNT = 3
     name = welcome_user()
     print(games_description(game))
+    
     for i in range(TRIES_COUNT):
         correct_answer = match_game(game)
         answer = prompt.string('Your answer: ')
