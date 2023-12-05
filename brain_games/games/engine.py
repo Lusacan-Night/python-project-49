@@ -6,8 +6,7 @@ from brain_games.games.gcd import gcd_game, calculate_gcd
 from brain_games.games.even import is_even, even_game
 from brain_games.games.prime import prime_game, calculate_prime
 from brain_games.games.calc import calculate_game, calculate_right_answer
-from brain_games.games.progression import progression_game
-from brain_games.games.progression import crypt_sequence, decrypt_sequence
+from brain_games.games.progression import progression_game, crypt_sequence
 
 
 def question(*args):
@@ -53,9 +52,9 @@ def launch_gcd_game():
 
 
 def launch_progression_game():
-    crypted_progression = crypt_sequence(progression_game())
+    crypted_progression, crypted_number = crypt_sequence(progression_game())
     question(' '.join(crypted_progression))
-    return decrypt_sequence(crypted_progression)
+    return crypted_number
 
 
 def launch_prime_game():
