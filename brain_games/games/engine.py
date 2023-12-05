@@ -2,8 +2,8 @@ import prompt
 
 from brain_games.games.cli import welcome_user
 
-from brain_games.games.gcd import gcd_game, calculate_gcd
 from brain_games.games.even import is_even, even_game
+from brain_games.games.gcd import gcd_game, calculate_gcd
 from brain_games.games.prime import prime_game, calculate_prime
 from brain_games.games.calc import calculate_game, calculate_right_answer
 from brain_games.games.progression import progression_game, crypt_sequence
