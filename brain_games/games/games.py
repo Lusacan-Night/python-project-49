@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games.scripts.cli import welcome_user
+from brain_games.games.cli import welcome_user
 from brain_games.games.utils import wrong_answer
 
 from .gcd import gcd_game
