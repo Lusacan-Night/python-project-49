@@ -63,7 +63,7 @@ def launch_prime_game():
     return calculate_prime(prime)
 
 
-def match_game(game):
+def launch_game(game):
     match game:
         case 'even':
             return launch_even_game()
@@ -87,7 +87,7 @@ def game_loop(game):
     print(games_description(game))
 
     for i in range(TRIES_COUNT):
-        correct_answer = match_game(game)
+        correct_answer = launch_game(game)
         answer = prompt.string('Your answer: ')
 
         if correct_answer == answer:
