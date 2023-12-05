@@ -7,7 +7,7 @@ def calculate_game():
     first = randint(start, end)
     second = randint(start, end)
     op = get_random_operator()
-    return (first, second, op)
+    return (first, op, second)
 
 
 def calculate_right_answer(first, op, second):

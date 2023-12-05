@@ -40,7 +40,7 @@ def launch_even_game():
 
 
 def launch_calc_game():
-    first, second, op = calculate_game()
+    first, op, second = calculate_game()
     question(first, op, second)
     return calculate_right_answer(first, op, second)
 
@@ -85,7 +85,7 @@ def game_loop(game):
     TRIES_COUNT = 3
     name = welcome_user()
     print(games_description(game))
-    
+
     for i in range(TRIES_COUNT):
         correct_answer = match_game(game)
         answer = prompt.string('Your answer: ')
