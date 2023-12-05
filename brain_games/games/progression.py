@@ -19,7 +19,7 @@ def crypt_sequence(sequence):
 def decrypt_sequence(sequence):
     sequence_start = sequence[0]
     sequence_end = len(sequence) - 1
-    result = round((sequence[1] - sequence[0]) / 2)
+    result = round((int(sequence[1]) - int(sequence[0])) / 2)
     if (sequence_start == '..'):
         result = sequence[1] - result
     if (sequence_end == '..'):
