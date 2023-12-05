@@ -17,7 +17,11 @@ def crypt_sequence(sequence):
 
 
 def decrypt_sequence(sequence):
-    gap_index = sequence.index('..')
-    before_gap, after_gap = sequence[gap_index - 1], sequence[gap_index + 1]
-    gap_result = int(before_gap) + round((int(after_gap) - int(before_gap)) / 2)
-    return str(gap_result)
+    sequence_start = sequence[0]
+    sequence_end = len(sequence) - 1
+    result = round((sequence[1] - sequence[0]) / 2)
+    if (sequence_start == '..'):
+        result = sequence[1] - result
+    if (sequence_end == '..'):
+        result = sequence[:-2] + result
+    return str(result)
