@@ -14,7 +14,7 @@ Brain games is a collection of 5 math mini-games, where you need to correctly an
     Optional:
         pipx: ^1.2.1
     
-Run ```make build```.
+Clone repository and run ```make build```.
 Install with pip ```make pip-install```.
 Install with pipx ```make pipx-install```.
 
