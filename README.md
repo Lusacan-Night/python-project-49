@@ -44,5 +44,4 @@ What number is missing in the progression?
 ### brain-prime
 Answer "yes" if given number is prime. Otherwise answer "no".
 
-<a href="https://asciinema.org/a/bjZfAA2pSjVH9v8diuLqlTec8"><img src="https://asciinema.org/a/bjZfAA2pSjVH9v8diuLqlTec8.png" width="836"/></a>
-
+[![asciicast](https://asciinema.org/a/5N8qrsLhfucXHFcBwxNae7AA5.png)](https://asciinema.org/a/5N8qrsLhfucXHFcBwxNae7AA5)
