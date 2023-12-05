@@ -1,19 +1,16 @@
 from operator import add, mul, sub
-from random import choice
-from brain_games.games.utils import question, get_random_number
-
-
-def pick_random_operator():
-    return choice(['*', '+', '-'])
+from random import choice, randint
 
 
 def calculate_game():
     start, end = 0, 100
-    first = get_random_number(start, end)
-    second = get_random_number(start, end)
-    op = pick_random_operator()
-    question(first, op, second)
+    first = randint(start, end)
+    second = randint(start, end)
+    op = get_random_operator()
+    return (first, second, op)
 
+
+def calculate_right_answer(first, op, second):
     match op:
         case '*':
             return str(mul(first, second))
@@ -21,3 +18,7 @@ def calculate_game():
             return str(add(first, second))
         case '-':
             return str(sub(first, second))
+
+
+def get_random_operator():
+    return choice(['*', '+', '-'])

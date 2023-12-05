@@ -1,13 +1,15 @@
-from brain_games.games.utils import question, get_random_number
+from random import randint
 
 
 def prime_game():
     start, end = 1, 200
-    step = -1
-    random_num = get_random_number(start, end)
-    question(random_num)
+    return randint(start, end)
 
-    for i in range(random_num - 1, 1, step):
-        if random_num % i == 0:
+
+def calculate_prime(number):
+    step = -1
+    range_end = 1
+    for i in range(number - 1, range_end, step):
+        if number % i == 0:
             return 'no'
     return 'yes'

@@ -1,4 +1,4 @@
-from brain_games.games.utils import question, get_random_number
+from random import randint
 
 
 def is_even(number):
@@ -7,6 +7,4 @@ def is_even(number):
 
 def even_game():
     start, end = 1, 100
-    random_number = get_random_number(start, end)
-    question(random_number)
-    return is_even(random_number)
+    return randint(start, end)

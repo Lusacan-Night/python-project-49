@@ -1,10 +1,13 @@
 from math import gcd
-from brain_games.games.utils import get_random_number
+from random import randint
 
 
 def gcd_game():
     start, end = 0, 100
-    first = get_random_number(start, end)
-    second = get_random_number(start, end)
-    print(f'Question: {first} {second}')
+    first = randint(start, end)
+    second = randint(start, end)
+    return (first, second)
+
+
+def calculate_gcd(first, second):
     return str(gcd(first, second))
