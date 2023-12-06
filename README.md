@@ -34,7 +34,7 @@ What is the result of the expression?
 ### brain-gcd
 Find the greatest common divisor of given numbers.
 
-[![asciicast](https://asciinema.org/a/adAvE2DUpfTKeJHiMWpMSTaur.png)](https://asciinema.org/a/adAvE2DUpfTKeJHiMWpMSTaur.)
+[![asciicast](https://asciinema.org/a/adAvE2DUpfTKeJHiMWpMSTaur.png)](https://asciinema.org/a/adAvE2DUpfTKeJHiMWpMSTaur)
 
 ### brain-progression
 What number is missing in the progression?
