@@ -82,11 +82,11 @@ def launch_game(game):
 
 
 def game_loop(game):
-    TRIES_COUNT = 3
+    ROUNDS = 3
     name = welcome_user()
     print(games_description(game))
 
-    for i in range(TRIES_COUNT):
+    for round in range(ROUNDS):
         correct_answer = launch_game(game)
         answer = prompt.string('Your answer: ')
 
@@ -94,7 +94,6 @@ def game_loop(game):
             print('Correct!')
         else:
             wrong_answer(correct_answer, answer)
-            print(f"Let's try again, {name}!")
-            return
+            return print(f"Let's try again, {name}!")
 
     print(f'Congratulations, {name}!')
