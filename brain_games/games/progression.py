@@ -23,11 +23,11 @@ def get_correct_answer(sequence):
     crypted_sequence = sequence.split(' ')
     crypt_element = crypted_sequence.index('..')
     if crypt_element == 0:
-        second_element, third_element = int(sequence[1]), int(sequence[2])
+        second_element, third_element = int(crypted_sequence[1]), int(crypted_sequence[2])
         step = third_element - second_element
         return second_element - step
-    elif crypt_element == len(sequence) - 1:
-        step = int(sequence[-2]) - int(sequence[-3])
+    elif crypt_element == len(crypted_sequence) - 1:
+        step = int(crypted_sequence[-2]) - int(crypted_sequence[-3])
         return sequence[2] - step
     else:
         step = round((int(crypted_sequence[crypt_element + 1]) - int(crypted_sequence[crypt_element - 1])) / 2)
