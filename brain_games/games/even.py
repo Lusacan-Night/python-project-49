@@ -16,4 +16,3 @@ def is_even(number):
 
 def get_correct_answer(number):
     return 'yes' if is_even(number) else 'no'
-

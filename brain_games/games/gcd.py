@@ -17,4 +17,3 @@ def get_correct_answer(numbers):
     first, second = numbers.split(' ')
     first, second = int(first), int(second)
     return gcd(first, second)
-

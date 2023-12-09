@@ -11,7 +11,6 @@ def gen_sequence():
     return sequence
 
 
-
 def get_question():
     crypted_sequence = gen_sequence()
     crypted_element = randrange(len(crypted_sequence) - 1)
@@ -23,12 +22,15 @@ def get_correct_answer(sequence):
     crypted_sequence = sequence.split(' ')
     crypt_element = crypted_sequence.index('..')
     if crypt_element == 0:
-        second_element, third_element = int(crypted_sequence[1]), int(crypted_sequence[2])
+        second_element = int(crypted_sequence[1])
+        third_element = int(crypted_sequence[2])
         step = third_element - second_element
         return second_element - step
     elif crypt_element == len(crypted_sequence) - 1:
         step = int(crypted_sequence[-2]) - int(crypted_sequence[-3])
         return sequence[2] - step
     else:
-        step = round((int(crypted_sequence[crypt_element + 1]) - int(crypted_sequence[crypt_element - 1])) / 2)
+        next_element = int(crypted_sequence[crypt_element + 1])
+        previous_element = int(crypted_sequence[crypt_element - 1])
+        step = round((next_element - previous_element) / 2)
         return int(crypted_sequence[crypt_element + 1]) - step

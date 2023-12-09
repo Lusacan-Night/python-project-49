@@ -3,8 +3,8 @@ import prompt
 from brain_games.games.cli import welcome_user
 
 
-def wrong_answer(correct_answer, user_answer):
-    print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+def wrong_answer(correct, incorrect):
+    return f"'{incorrect}' is wrong answer ;(. Correct answer was '{correct}'."
 
 
 def launch_game(get_description, get_question, get_correct_answer):
@@ -17,12 +17,12 @@ def launch_game(get_description, get_question, get_correct_answer):
         correct_answer = str(get_correct_answer(question))
 
         print('Question:', question)
-        answer = prompt.string('Your answer: ')
+        user_answer = prompt.string('Your answer: ')
 
-        if correct_answer == answer:
+        if correct_answer == user_answer:
             print('Correct!')
         else:
-            wrong_answer(correct_answer, answer)
+            print(wrong_answer(correct_answer, user_answer))
             return print(f"Let's try again, {user_name}!")
 
     print(f'Congratulations, {user_name}!')
