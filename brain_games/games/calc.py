@@ -1,24 +1,24 @@
-from operator import add, mul, sub
 from random import choice, randint
 
 
-def calculate_game():
-    start, end = 0, 100
-    first = randint(start, end)
-    second = randint(start, end)
-    op = get_random_operator()
-    return (first, op, second)
+def get_description():
+    return 'What is the result of the expression?'
 
 
-def calculate_right_answer(first, op, second):
+def get_question():
+    begin, end = 0, 100
+    first, second = randint(begin, end), randint(begin, end)
+    op = choice(['*', '+', '-'])
+    return f'{first} {op} {second}'
+
+
+def get_correct_answer(expression):
+    first, op, second = expression.split(' ')
+    first, second = int(first), int(second)
     match op:
         case '*':
-            return str(mul(first, second))
+            return f'{first * second}'
         case '+':
-            return str(add(first, second))
+            return f'{first + second}'
         case '-':
-            return str(sub(first, second))
-
-
-def get_random_operator():
-    return choice(['*', '+', '-'])
+            return f'{first - second}'

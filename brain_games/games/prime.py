@@ -1,19 +1,27 @@
 from random import randint
 
 
-def prime_game():
-    start, end = 1, 200
-    return randint(start, end)
+def get_description():
+    return 'Answer "yes" if given number is prime. Otherwise answer "no"'
 
 
-def calculate_prime(number):
+def get_question():
+    begin, end = 1, 200
+    return randint(begin, end)
+
+
+def is_prime(number):
     step = -1
     range_end = 1
 
     if number == 1:
-        return 'no'
+        return False
 
     for i in range(number - 1, range_end, step):
         if number % i == 0:
-            return 'no'
-    return 'yes'
+            return False
+    return True
+
+
+def get_correct_answer(number):
+    return 'yes' if is_prime(number) else 'no'
