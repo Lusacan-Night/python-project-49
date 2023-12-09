@@ -24,7 +24,7 @@ Install with pipx ```make pipx-install```
 ### brain-even 
 Answer "yes" if the number is even, otherwise answer "no".
 
-[![asciicast](https://asciinema.org/a/MdxtmbtlnZ6NQ8Ak8S1umTuWY.png)](https://asciinema.org/a/MdxtmbtlnZ6NQ8Ak8S1umTuWY)
+[![asciicast](https://asciinema.org/a/wG2W0kpF5V0meeWFACRjfhlkM.png)](https://asciinema.org/a/wG2W0kpF5V0meeWFACRjfhlkM)
 
 ### brain-calc
 What is the result of the expression?
