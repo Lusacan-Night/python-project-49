@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
-from brain_games.games.engine import launch_game
+import brain_games.games.even as even
 
-from brain_games.games.even import get_correct_answer
-from brain_games.games.even import get_description, get_question
+from brain_games.games.engine import launch_game
 
 
 def main():
-    launch_game(get_description, get_question, get_correct_answer)
+    launch_game(even.DESCRIPTION, even.get_question)
 
 
 if __name__ == '__main__':
