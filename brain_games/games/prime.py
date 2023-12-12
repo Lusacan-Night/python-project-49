@@ -1,13 +1,14 @@
 from random import randint
 
 
-def get_description():
-    return 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_question():
     begin, end = 1, 200
-    return randint(begin, end)
+    question = randint(begin, end)
+    correct_answer = 'yes' if is_prime(question) else 'no'
+    return (question, correct_answer)
 
 
 def is_prime(number):
@@ -21,7 +22,3 @@ def is_prime(number):
         if number % i == 0:
             return False
     return True
-
-
-def get_correct_answer(number):
-    return 'yes' if is_prime(number) else 'no'

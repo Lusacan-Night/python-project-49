@@ -7,14 +7,13 @@ def wrong_answer(correct, incorrect):
     return f"'{incorrect}' is wrong answer ;(. Correct answer was '{correct}'."
 
 
-def launch_game(get_description, get_question, get_correct_answer):
+def launch_game(description, get_question):
     ROUNDS = 3
     user_name = welcome_user()
-    print(get_description())
+    print(description)
 
     for round in range(ROUNDS):
-        question = get_question()
-        correct_answer = str(get_correct_answer(question))
+        question, correct_answer = get_question()
 
         print('Question:', question)
         user_answer = prompt.string('Your answer: ')
