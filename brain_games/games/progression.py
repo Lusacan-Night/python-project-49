@@ -12,7 +12,6 @@ def gen_sequence(initial_term, last_term, common_difference):
 def convert_to_question(sequence, random_element):
     crypted_sequence = sequence[:]
     crypted_sequence = list(map(str, crypted_sequence))
-    correct_answer = crypted_sequence[random_element]
     crypted_sequence[random_element] = '..'
     question = ' '.join(crypted_sequence)
     return question
