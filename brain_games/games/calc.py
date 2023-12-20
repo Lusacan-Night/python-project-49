@@ -4,9 +4,9 @@ from random import choice, randint
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def get_question():
-    begin, end = 0, 100
-    first, second = randint(begin, end), randint(begin, end)
+def get_question_and_answer():
+    BEGIN, END = 0, 100
+    first, second = randint(BEGIN, END), randint(BEGIN, END)
     op = choice(['*', '+', '-'])
 
     question = f'{first} {op} {second}'
