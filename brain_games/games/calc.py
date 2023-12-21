@@ -8,7 +8,7 @@ MATH_OPERATOR_SYMBOLS = ['*', '+', '-']
 
 
 def get_question_and_answer():
-    first = randint(LOWER_BOUND, UPPER_BOUND),
+    first = randint(LOWER_BOUND, UPPER_BOUND)
     second = randint(LOWER_BOUND, UPPER_BOUND)
     op = choice(MATH_OPERATOR_SYMBOLS)
 
