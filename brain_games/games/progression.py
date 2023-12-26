@@ -4,12 +4,15 @@ from random import randint
 DESCRIPTION = 'What number is missing in the progression?'
 LOWER_BOUND = 1
 UPPER_BOUND = 5
-MEMBERS_LOWER_BOUND = 25
-MEMBERS_UPPER_BOUND = 50
+MEMBERS_LOWER_BOUND = 5
+MEMBERS_UPPER_BOUND = 25
 
 
 def gen_sequence(first_term, members_count, common_difference):
-    sequence = list(range(first_term, members_count, common_difference))
+    sequence = []
+    for i in range(members_count):
+        sequence.append(first_term)
+        first_term += common_difference
     return sequence
 
 
